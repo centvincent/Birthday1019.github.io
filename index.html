@@ -43,7 +43,7 @@
     <audio id="myAudio">
         <source src="happy-birthday-155461.mp3" type="audio/mpeg">
     </audio>
-    <audio id="endAudio" src="greet.MP3"></audio>
+    <audio id="endAudio" src="greet.mp3"></audio>
 
 <script src="https://cdn.jsdelivr.net/npm/fireworks-js@latest/dist/fireworks.js"></script>
 <script src="fireworks.js"></script>
@@ -114,7 +114,6 @@ window.addEventListener('load', adjustTextPathOffset);
         var endAudioElement = document.getElementById("endAudio");
         var confettiInterval, imageInterval, imageTimeout;
 
-        // Random image pop-up logic
         function getRandomPosition() {
             const x = Math.floor(Math.random() * (window.innerWidth - 200)); 
             const y = Math.floor(Math.random() * (window.innerHeight - 200)); 
@@ -170,12 +169,10 @@ window.addEventListener('load', adjustTextPathOffset);
             });
         };
 
-        // Function to toggle audio and start confetti and images
         function toggleAudio() {
             if (audioElement.paused) {
                 audioElement.play();
 
-                // Start confetti every 1.8 seconds when the audio plays
                 confettiInterval = setInterval(fireConfetti, 1800);  
 
                 // Start image fade-in after a 20-second delay
@@ -190,11 +187,10 @@ window.addEventListener('load', adjustTextPathOffset);
 
                 // Stop image fade-in effect
                 clearInterval(imageInterval);
-                clearTimeout(imageTimeout);  // Clear the timeout if audio is paused before 20 seconds
+                clearTimeout(imageTimeout); 
             }
         }
         
-        // Event listener for when the song ends
         audioElement.addEventListener('ended', () => {
             clearInterval(confettiInterval);
             clearInterval(imageInterval);
