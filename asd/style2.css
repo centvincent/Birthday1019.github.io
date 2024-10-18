@@ -1,0 +1,162 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+   */
+   body{
+    background: #333;
+    font-family: 'Luckiest Guy', cursive;
+   }
+  .numbertext {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .mySlides {
+    display: none;
+    text-align: center;
+  }
+
+  img{
+    width: 750px;
+    height: 100%;
+    object-fit: fill;
+  }
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: #000;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    width: 100%;
+    height: 60px;
+    border-radius: 12px;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  /* Navigation buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 3px;
+    user-select: none;
+    text-decoration: none;
+    -webkit-user-select: none;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  /* Adjust image width for tablets and smaller devices */
+  img {
+      width: 100%;
+      height: auto;
+  }
+
+  .prev, .next {
+      font-size: 30px; /* Adjust button size */
+      padding: 10px;   /* Adjust padding */
+  }
+
+  .caption-container {
+      font-size: 18px; /* Smaller caption font */
+      padding: 8px;    /* Adjust padding */
+      height: auto;
+  }
+
+  .img-thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col {
+    flex: 0 0 20%; /* Each image takes up 50% of the row (2 images per row) */
+    max-width: 50%; /* Ensure proper scaling */
+    margin-bottom: 10px; /* Add spacing between rows */
+}
+}
+
+@media (max-width: 576px) {
+  /* For mobile phones */
+  .prev, .next {
+      font-size: 25px; /* Further adjust button size */
+      padding: 8px;
+  }
+
+  .caption-container {
+      font-size: 16px; /* Even smaller caption font */
+      padding: 6px;
+  }
+
+  /* Reduce the size of thumbnails */
+  .img-thumbnail {
+      width: 70px;
+      height: 70px;
+  }
+
+  /* Adjust margins and padding of rows and columns */
+  .row {
+      margin: 0;
+      padding: 0;
+  }
+
+  .col {
+      padding: 5px; /* Reduce column padding */
+  }
+
+  /* Adjust the navigation arrow positioning for small screens */
+  .prev, .next {
+      top: 50%;
+  }
+
+  /* Ensure slides stay centered */
+  .mySlides {
+    display: none;
+    text-align: center;
+    width: 100%; /* Ensure it takes up the full width */
+    height: auto; /* Adjust height accordingly */
+}
+
+.mySlides img {
+    width: 100%; /* Images take up full width of the parent element */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distorting */
+}
+}
