@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Thumbnail section */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding: 5px;
+}
+
+.column img {
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Full-width images */
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+/* Set the size of the images */
+.mySlides img {
+  width: 430px;
+  height: 100%; /* Set a fixed height */
+  object-fit: fill; /* Adjusts image to fill the area */
+}
+
+.numbertext {
+  color: #000;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: #000;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 3px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+
+        .fixed-image {
+        position: fixed;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 550px;
+        height: auto;
+        opacity: 0;
+        z-index: 9000;
+        transition: opacity 1s ease;
+        }
+    </style>
+</head>
+<body>
+
+    
+    
+    <video class="fixed-image">
+        <source src="vid1.mp4" type="video/mp4">
+    </video>
+
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@latest/dist/fireworks.js"></script>
+<script src="fireworks.js"></script>
+</body>
+</html>

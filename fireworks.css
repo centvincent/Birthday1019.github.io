@@ -1,0 +1,7 @@
+.fireworkDiv{
+    position: relative;
+    height: 720px;
+    width: 100%;
+    z-index: 1000;
+    transform: translateY(-110%);
+}
