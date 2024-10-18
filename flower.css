@@ -16,6 +16,7 @@ a{
     .flowers{
         scale: 0.9;
         transform: translateX(62px);
+        top: -10%;
      }
      a {
         font-size: 12px;
