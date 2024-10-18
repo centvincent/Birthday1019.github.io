@@ -2,7 +2,7 @@ body {
     background-color: #333;
     font-family: Cooper Black;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 32px;
     margin: 10px;
   }
   
@@ -31,13 +31,11 @@ body {
     box-shadow: 0 0 100px greenyellow;
 }
 
-button{
-  z-index: 9990;
-}
 a{
   text-decoration: none;
   color: black;
   font-weight: bold;
+  z-index: 9990;
 }
 .fixed-image {
   position: fixed;

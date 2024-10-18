@@ -5,5 +5,5 @@ body{
 a{
     color:#ff9800; 
     font-weight: bold;
-    z-index: 1000;
+    z-index: 9999;
 }
