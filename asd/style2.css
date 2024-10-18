@@ -1,7 +1,12 @@
-
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+   */
    body{
     background: #333;
-    font-family: Montserrat;
+    font-family: 'Luckiest Guy', cursive;
    }
   .numbertext {
     color: #000;
@@ -71,3 +76,87 @@
     background-color: rgba(255, 255, 255, 0.8);
   }
   
+  /* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  /* Adjust image width for tablets and smaller devices */
+  img {
+      width: 100%;
+      height: auto;
+  }
+
+  .prev, .next {
+      font-size: 30px; /* Adjust button size */
+      padding: 10px;   /* Adjust padding */
+  }
+
+  .caption-container {
+      font-size: 18px; /* Smaller caption font */
+      padding: 8px;    /* Adjust padding */
+      height: auto;
+  }
+
+  .img-thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col {
+    flex: 0 0 20%; /* Each image takes up 50% of the row (2 images per row) */
+    max-width: 50%; /* Ensure proper scaling */
+    margin-bottom: 10px; /* Add spacing between rows */
+}
+}
+
+@media (max-width: 576px) {
+  /* For mobile phones */
+  .prev, .next {
+      font-size: 25px; /* Further adjust button size */
+      padding: 8px;
+  }
+
+  .caption-container {
+      font-size: 16px; /* Even smaller caption font */
+      padding: 6px;
+  }
+
+  /* Reduce the size of thumbnails */
+  .img-thumbnail {
+      width: 70px;
+      height: 70px;
+  }
+
+  /* Adjust margins and padding of rows and columns */
+  .row {
+      margin: 0;
+      padding: 0;
+  }
+
+  .col {
+      padding: 5px; /* Reduce column padding */
+  }
+
+  /* Adjust the navigation arrow positioning for small screens */
+  .prev, .next {
+      top: 50%;
+  }
+
+  /* Ensure slides stay centered */
+  .mySlides {
+    display: none;
+    text-align: center;
+    width: 100%; /* Ensure it takes up the full width */
+    height: auto; /* Adjust height accordingly */
+}
+
+.mySlides img {
+    width: 100%; /* Images take up full width of the parent element */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distorting */
+}
+}
