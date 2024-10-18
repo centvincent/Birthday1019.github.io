@@ -15,7 +15,7 @@ a{
 @media only screen and (max-width: 768px){
     .flowers{
         scale: 0.9;
-        transform: translateX(82px);
+        transform: translateX(62px);
      }
      a {
         font-size: 12px;
