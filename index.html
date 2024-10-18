@@ -53,6 +53,24 @@
      document.body.scrollTop = document.documentElement.scrollTop = 0;
 </script>
 <script>
+    function adjustTextPathOffset() {
+    const textPath = document.getElementById('birthdayText');
+    if (window.innerWidth <= 768) {
+        // Mobile screens
+        textPath.setAttribute('startOffset', '50px'); // Adjust startOffset for mobile
+    } else {
+        // Larger screens
+        textPath.setAttribute('startOffset', '10px'); // Default startOffset
+    }
+}
+
+// Run on window resize and on page load
+window.addEventListener('resize', adjustTextPathOffset);
+window.addEventListener('load', adjustTextPathOffset);
+
+</script>
+
+<script>
     const cakejs = document.querySelector(".cake");
     const images = [
         'images/image1.jpg',
