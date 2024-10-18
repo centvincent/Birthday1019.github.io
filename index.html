@@ -56,12 +56,15 @@
     function adjustTextPathOffset() {
     const textPath = document.getElementById('birthdayText');
     if (window.innerWidth <= 768) {
-        textPath.setAttribute('startOffset', '24px'); 
+        
+        textPath.setAttribute('startOffset', '50px'); 
     } else {
+        
         textPath.setAttribute('startOffset', '10px'); 
     }
 }
 
+// Run on window resize and on page load
 window.addEventListener('resize', adjustTextPathOffset);
 window.addEventListener('load', adjustTextPathOffset);
 
