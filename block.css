@@ -1,6 +1,6 @@
 body {
     background-color: #333;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: Montserrat;
     font-size: 35px;
     margin: 10px;
   }
@@ -43,7 +43,7 @@ a{
   top: 65%;
   left: 49%;
   transform: translate(-50%, -50%);
-  width: 280px;
+  width: 310px;
   height: auto;
   opacity: 0;
   z-index: 9000;
