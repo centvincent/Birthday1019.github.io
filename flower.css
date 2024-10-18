@@ -3,4 +3,7 @@ a{
     font-weight: bold;
     color: black;
     z-index: 1000;
+    font-weight: bold;
+    color: #ff9800;
+    font-size: 22px;
 }
