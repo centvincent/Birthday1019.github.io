@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Fade In and Out</title>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .random-image {
+            position: absolute;
+            display: none;
+            max-width: 200px; /* Set a max size for the images */
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const images = [
+    'image1.jpg',
+    'image2.jpg',
+    'image3.jpg',
+    'image4.jpg'
+];
+
+
+    function getRandomPosition() {
+        const x = Math.floor(Math.random() * (window.innerWidth - 200));  // Random X position, subtract max image width
+        const y = Math.floor(Math.random() * (window.innerHeight - 200)); // Random Y position, subtract max image height
+        return { x, y };
+    }
+
+    function fadeInOutRandomImage() {
+        // Create a new img element
+        const img = document.createElement('img');
+        img.src = images[Math.floor(Math.random() * images.length)];  // Select a random image
+        img.className = 'random-image';
+
+        // Random position
+        const { x, y } = getRandomPosition();
+        img.style.left = `${x}px`;
+        img.style.top = `${y}px`;
+
+        document.body.appendChild(img);
+
+        // Fade in the image
+        img.style.display = 'block';
+        img.style.opacity = 0;
+        let opacity = 0;
+
+        const fadeIn = setInterval(() => {
+            opacity += 0.05;
+            img.style.opacity = opacity;
+            if (opacity >= 1) {
+                clearInterval(fadeIn);
+
+                // After the fade-in completes, wait 2 seconds and then fade out
+                setTimeout(() => {
+                    const fadeOut = setInterval(() => {
+                        opacity -= 0.05;
+                        img.style.opacity = opacity;
+                        if (opacity <= 0) {
+                            clearInterval(fadeOut);
+                            img.remove(); // Remove the image after fade out
+                        }
+                    }, 50);
+                }, 2000);  // 2 seconds before fade out
+            }
+        }, 50);
+    }
+
+    // Call the function every 3 seconds to fade in/out random images
+    setInterval(fadeInOutRandomImage, 3000);
+
+</script>
+
+</body>
+</html>

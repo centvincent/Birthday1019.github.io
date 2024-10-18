@@ -1,0 +1,70 @@
+body {
+    background-color: #333;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 35px;
+    margin: 10px;
+  }
+  
+  path {
+    fill: transparent;
+  
+  }
+  
+  text {
+    fill: #FF9800;
+    z-index: 1000;
+  }
+
+  .greet{
+    height: 100vh;
+  }
+
+  .random-image {
+    position: absolute;
+    border-radius: 12px;
+    display: none;
+    max-width: 255px;
+    max-height: 255px;
+    z-index: 9000;
+    background: greenyellow;
+    box-shadow: 0 0 100px greenyellow;
+}
+
+button{
+  z-index: 9990;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.fixed-image {
+  position: fixed;
+  top: 65%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: auto;
+  opacity: 0;
+  z-index: 9000;
+  transition: opacity 1s ease;
+  background: greenyellow;
+  box-shadow: 0 0 100px greenyellow;
+  border-style: outset;
+}
+
+@media only screen and (max-width: 768px) {
+  .cake{
+    scale: 0.5;
+    top: 60%;
+  }
+
+  .greet{
+    scale: 1.25;
+    margin-top: 50%;
+  }
+  .random-image{
+    scale: 0.5;
+  }
+
+}
