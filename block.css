@@ -40,7 +40,7 @@ a{
 .fixed-image {
   position: fixed;
   top: 65%;
-  left: 49%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 280px;
   height: auto;
@@ -64,7 +64,7 @@ a{
   }
   .random-image{
     scale: 0.7;
-    right: 3px;
+    
   }
 
 }
