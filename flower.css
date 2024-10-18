@@ -3,4 +3,5 @@ a{
     font-weight: bold;
     color:#ff9800; 
     font-weight: bold;
+    z-index: 1000;
 }
