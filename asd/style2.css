@@ -75,16 +75,10 @@
   .next:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-<<<<<<< HEAD
-  
+ 
   /* Media Queries for responsiveness */
 @media only screen and (max-width: 768px) {
   /* Adjust image width for tablets and smaller devices */
-=======
-
-@media (max-width: 768px) {
-  
->>>>>>> 4a3e194d8298acbfbd3a646026eb208e2895479e
   img {
       width: 100%;
       height: auto;
@@ -102,30 +96,25 @@
   }
 
   .img-thumbnail {
-    width: 100%;
-    height: auto;
+      width: 100%;
+      height: auto;
+  }
+
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .col {
+      flex: 0 0 20%; 
+      max-width: 50%; 
+      margin-bottom: 10px; 
+  }
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.col {
-    flex: 0 0 20%; 
-    max-width: 50%; 
-    margin-bottom: 10px; 
-}
-}
-
-<<<<<<< HEAD
 @media only screen and (max-width: 576px) {
   /* For mobile phones */
-=======
-@media (max-width: 576px) {
-  
->>>>>>> 4a3e194d8298acbfbd3a646026eb208e2895479e
   .prev, .next {
       font-size: 25px;
       padding: 8px;
@@ -158,9 +147,9 @@
     height: auto;
 }
 
-.mySlides img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-}
+  .mySlides img {
+      width: 100%; 
+      height: auto; 
+      object-fit: cover; 
+  }
 }
