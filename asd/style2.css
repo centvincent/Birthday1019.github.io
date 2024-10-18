@@ -77,7 +77,7 @@
   }
   
   /* Media Queries for responsiveness */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   /* Adjust image width for tablets and smaller devices */
   img {
       width: 100%;
@@ -113,7 +113,7 @@
 }
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   /* For mobile phones */
   .prev, .next {
       font-size: 25px; /* Further adjust button size */
